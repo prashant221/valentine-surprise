@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Will You Be My Valentine? 💖</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            background-color: #ffe6f0;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        h1 {
+            margin-top: 100px;
+            color: #e91e63;
+            font-size: 40px;
+        }
+
+        button {
+            padding: 15px 30px;
+            font-size: 18px;
+            border-radius: 10px;
+            border: none;
+            cursor: pointer;
+            margin: 20px;
+        }
+
+        #yesBtn {
+            background-color: #e91e63;
+            color: white;
+        }
+
+        #noBtn {
+            background-color: gray;
+            color: white;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Will You Be My Valentine? 💕</h1>
+
+    <button id="yesBtn" onclick="sayYes()">YES 💖</button>
+    <button id="noBtn" onmouseover="moveButton()">NO 🙈</button>
+
+    <script>
+        function sayYes() {
+            document.body.innerHTML = `
+                <h1 style="color:#e91e63; margin-top:150px;">
+                    You Said YES! 💍💖
+                </h1>
+                <p style="font-size:20px;">
+                    You just made me the happiest man alive ❤️
+                </p>
+            `;
+        }
+
+        function moveButton() {
+            var button = document.getElementById("noBtn");
+            var x = Math.random() * (window.innerWidth - 100);
+            var y = Math.random() * (window.innerHeight - 50);
+            button.style.left = x + "px";
+            button.style.top = y + "px";
+        }
+    </script>
+
+</body>
+</html>
