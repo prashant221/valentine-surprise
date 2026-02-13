@@ -2,21 +2,25 @@
 <html>
 <head>
     <title>Will You Be My Valentine? 💖</title>
+
     <style>
+        /* Center everything and give soft romantic pink background */
         body {
             text-align: center;
             font-family: Arial, sans-serif;
-            background-color: #ffe6f0;
+            background-color: #ffe6f0; /* Soft love pink 💕 */
             height: 100vh;
-            overflow: hidden;
+            overflow: hidden; /* So the NO button can't escape the love world 😜 */
         }
 
+        /* Main love question styling */
         h1 {
             margin-top: 100px;
-            color: #e91e63;
+            color: #e91e63; /* Romantic pink color 💗 */
             font-size: 40px;
         }
 
+        /* Styling for both buttons */
         button {
             padding: 15px 30px;
             font-size: 18px;
@@ -26,44 +30,61 @@
             margin: 20px;
         }
 
+        /* YES button - confident and bold like true love ❤️ */
         #yesBtn {
             background-color: #e91e63;
             color: white;
         }
 
+        /* NO button - trying to escape but love is faster 😉 */
         #noBtn {
             background-color: gray;
             color: white;
-            position: absolute;
+            position: absolute; /* So it can run around */
         }
     </style>
 </head>
+
 <body>
 
+    <!-- The most important question of your life 💕 -->
     <h1>Will You Be My Valentine? 💕</h1>
 
+    <!-- YES button - the correct answer 😍 -->
     <button id="yesBtn" onclick="sayYes()">YES 💖</button>
+
+    <!-- NO button - but it won’t stay still 🙈 -->
     <button id="noBtn" onmouseover="moveButton()">NO 🙈</button>
 
     <script>
+
+        // Function when she clicks YES 💍
         function sayYes() {
+            // Replace the whole page with a romantic message 💖
             document.body.innerHTML = `
                 <h1 style="color:#e91e63; margin-top:150px;">
                     You Said YES! 💍💖
+                    I LOVE YOU SUPRIYA. You are mine forever ❤️
                 </h1>
                 <p style="font-size:20px;">
-                    You just made me the happiest man alive ❤️
+                    You just made me the happiest man alive 🥰
                 </p>
             `;
         }
 
+        // Function to make NO button run away 😜
         function moveButton() {
             var button = document.getElementById("noBtn");
+
+            // Generate random position inside window
             var x = Math.random() * (window.innerWidth - 100);
             var y = Math.random() * (window.innerHeight - 50);
+
+            // Move button to new random location
             button.style.left = x + "px";
             button.style.top = y + "px";
         }
+
     </script>
 
 </body>
